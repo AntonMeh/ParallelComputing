@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Anton\\Desktop\\uni\\ParallelComputing\\Lab1\\C#\\Lab1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3351FC85-3545-43C4-9FBF-64FB491C2F8F}|Lab1\\Lab1.csproj|c:\\users\\anton\\desktop\\uni\\parallelcomputing\\lab1\\c#\\lab1\\lab1\\threadcalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3351FC85-3545-43C4-9FBF-64FB491C2F8F}|Lab1\\Lab1.csproj|solutionrelative:lab1\\threadcalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3351FC85-3545-43C4-9FBF-64FB491C2F8F}|Lab1\\Lab1.csproj|c:\\users\\anton\\desktop\\uni\\parallelcomputing\\lab1\\c#\\lab1\\lab1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3351FC85-3545-43C4-9FBF-64FB491C2F8F}|Lab1\\Lab1.csproj|solutionrelative:lab1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ThreadCalculator.cs",
+              "DocumentMoniker": "C:\\Users\\Anton\\Desktop\\uni\\ParallelComputing\\Lab1\\C#\\Lab1\\Lab1\\ThreadCalculator.cs",
+              "RelativeDocumentMoniker": "Lab1\\ThreadCalculator.cs",
+              "ToolTip": "C:\\Users\\Anton\\Desktop\\uni\\ParallelComputing\\Lab1\\C#\\Lab1\\Lab1\\ThreadCalculator.cs",
+              "RelativeToolTip": "Lab1\\ThreadCalculator.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAmwDgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T14:46:15.883Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Anton\\Desktop\\uni\\ParallelComputing\\Lab1\\C#\\Lab1\\Lab1\\Program.cs",
+              "RelativeDocumentMoniker": "Lab1\\Program.cs",
+              "ToolTip": "C:\\Users\\Anton\\Desktop\\uni\\ParallelComputing\\Lab1\\C#\\Lab1\\Lab1\\Program.cs",
+              "RelativeToolTip": "Lab1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T14:45:02.717Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
