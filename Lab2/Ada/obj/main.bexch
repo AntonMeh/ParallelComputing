@@ -1,0 +1,21 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+C:\Users\Anton\Desktop\uni\ParallelComputing\Lab2\Ada\lab2.gpr
+20260330213136 47eea9bf3086d27efb021b3f9e0c2a61
+[BOUND OBJECT FILES]
+C:\Users\Anton\Desktop\uni\ParallelComputing\Lab2\Ada\obj\main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-LC:\Users\Anton\Desktop\uni\ParallelComputing\Lab2\Ada\obj\
+-LC:\Users\Anton\Desktop\uni\ParallelComputing\Lab2\Ada\obj\
+-LD:/downloads/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/adalib/
+-static
+D:/downloads/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/adalib/libgnarl.a
+D:/downloads/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/adalib/libgnat.a
+-Xlinker
+--stack=0x800000,0x1000
+-mthreads
