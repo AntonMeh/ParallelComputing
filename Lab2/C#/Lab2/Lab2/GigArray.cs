@@ -49,7 +49,8 @@ namespace Lab2
                 int end = (i == threadsCount - 1) ? length : start + chunkSize;
 
                 threads[i] = new Thread(SearchMinThread); 
-                threads[i].Start(new Bound(start, end));  
+                //threads[i].Start(new Bound(start, end));
+                threads[i].Start(new Int64());
             }
 
             lock (lockForCount)
@@ -65,9 +66,10 @@ namespace Lab2
 
         private void SearchMinThread(object param)
         {
-            if (param is Bound bound)
+            Bound bound = param as Bound;
+            //if (param is Bound bound)
             {
-                long localMin = array[bound.StartIndex];
+            long localMin = array[bound.StartIndex];
                 int localIndex = bound.StartIndex;
 
                 for (int i = bound.StartIndex + 1; i < bound.FinishIndex; i++)

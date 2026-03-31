@@ -8,19 +8,23 @@ P SS ZX
 
 RN
 RV SIMPLE_BARRIERS
+RV NO_ALLOCATORS
 RV NO_EXCEPTION_HANDLERS
 RV NO_EXCEPTION_PROPAGATION
 RV NO_EXCEPTIONS
 RV NO_FIXED_POINT
 RV NO_IO
 RV NO_IMPLICIT_CONDITIONALS
+RV NO_LOCAL_ALLOCATORS
 RV NO_LOCAL_PROTECTED_OBJECTS
 RV NO_NESTED_FINALIZATION
 RV NO_PROTECTED_TYPES
 RV NO_SECONDARY_STACK
+RV NO_STANDARD_ALLOCATORS_AFTER_ELABORATION
 RV NO_STANDARD_STORAGE_POOLS
 RV NO_TASK_HIERARCHY
 RV NO_TASKING
+RV NO_UNCHECKED_DEALLOCATION
 RV NO_DEFAULT_INITIALIZATION
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
@@ -32,7 +36,7 @@ RV MAX_TASK_ENTRIES=1
 RV MAX_TASKS=1+
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U main%b		main.adb		201e41a9 NE OO SU IL
+U main%b		main.adb		eb6ceda9 NE OO SU
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 W ada.numerics%s	a-numeri.ads		a-numeri.ali
@@ -40,6 +44,7 @@ W ada.numerics.discrete_random%s
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
+W ada.unchecked_deallocation%s
 Z interfaces%s		interfac.ads		interfac.ali
 W system%s		system.ads		system.ali
 Z system.concat_2%s	s-conca2.adb		s-conca2.ali
@@ -77,11 +82,12 @@ D a-stuten.ads		20260302071422 c6ced0ae ada.strings.utf_encoding%s
 D a-tags.ads		20260302071422 fbca0ad5 ada.tags%s
 D a-textio.ads		20260302071422 34ef47de ada.text_io%s
 D a-unccon.ads		20260302071422 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20260302071422 c3a8ac65 ada.unchecked_deallocation%s
 D interfac.ads		20260302071422 9111f9c1 interfaces%s
 D i-c.ads		20260302071422 e94c966a interfaces.c%s
 D i-cstrin.ads		20260302071422 5409c1a4 interfaces.c.strings%s
 D i-cstrea.ads		20260302071422 ffd01b9d interfaces.c_streams%s
-D main.adb		20260330215048 9c63aa79 main%b
+D main.adb		20260331070042 94b9aa1c main%b
 D system.ads		20260302071422 a869df9e system%s
 D s-atacco.ads		20260302071422 5868e3ba system.address_to_access_conversions%s
 D s-arit64.ads		20260302071422 e45973b2 system.arith_64%s
@@ -134,85 +140,90 @@ D s-vs_uns.ads		20260302071422 e7f47a27 system.vs_uns%s
 D s-wchcon.ads		20260302071422 d9032363 system.wch_con%s
 D s-win32.ads		20260302071422 f77987dc system.win32%s
 G a e
-G c Z b b [main standard 5 11 none]
+G c Z b b [main standard 6 11 none]
 X 1 ada.ads
-18K9*Ada 22e8 23|1r6 1r23 2r6 3r6 3r25 22r27
+18K9*Ada 22e8 24|1r6 1r23 2r6 3r6 3r25 4r6 19r26 28r27
 X 6 a-numeri.ads
-20K13*Numerics 36e17 23|2r10 22r31
+20K13*Numerics 36e17 24|2r10 28r31
 X 9 a-nudira.ads
-46k22*Discrete_Random 83e33 23|2w19 22r40
-52R9 Generator<46|65R9> 23|23r16[22]
-54V13 Random{integer} 23|27s25[22]
-63U14 Reset<46|103p14> 23|25s12[22]
+46k22*Discrete_Random 83e33 24|2w19 28r40
+52R9 Generator<47|65R9> 24|29r16[28]
+54V13 Random{integer} 24|33s25[28]
+63U14 Reset<47|103p14> 24|31s12[28]
 X 10 a-nudira.adb
-53V16 Random[46|86]{integer} 47|402b13[23|22]
-65V16 Random[46|86]{integer} 47|402b13[23|22]
+53V16 Random[47|86]{integer} 48|402b13[24|28]
+65V16 Random[47|86]{integer} 48|402b13[24|28]
 X 11 a-reatim.ads
-46K13*Real_Time 193e18 23|3w10 3r29
-57O9*Time<duration> 23|17r27
-62O9*Time_Span<duration> 23|18r14
-69V13*Clock{57O9} 23|108s18 112s16
-79V14*"-"{62O9} 23|113s24
-118V13*To_Duration{duration} 23|115s39
+46K13*Real_Time 193e18 24|3w10 3r29
+57O9*Time<duration> 24|23r27
+62O9*Time_Span<duration> 24|24r14
+69V13*Clock{57O9} 24|118s18 120s16
+79V14*"-"{62O9} 24|122s24
+118V13*To_Duration{duration} 24|124s49
 X 17 a-textio.ads
-58K13*Text_IO 785e16 23|1w10 1r27
-565U14*Put_Line 23|98s7 99s7 103s4 106s4 115s4
-X 19 interfac.ads
+58K13*Text_IO 785e16 24|1w10 1r27
+565U14*Put_Line 24|108s7 109s7 113s4 116s4 124s4
+X 19 a-uncdea.ads
+23u15*Unchecked_Deallocation 24|4w10 19r30
+X 20 interfac.ads
 68I9*Integer_64<long_long_integer>
 92M9*Unsigned_32
 95M9*Unsigned_64
-X 23 main.adb
-5U11*main 5b11 116l5 116t9
-7i4 Dim{integer} 10r19 26r19 86r31 92r43
-8i4 Thread_Num{integer} 61r71 85r26 86r37 90r19 92r27 106r47
-10a4 Arr(integer) 27m10 29m7 33r35 36r13 37r24
-12R9 Min_Result 15e14 32r62 33r13 45r39 46r37 49r20 53r39 61r37 73r19 87r19
-13i7 Val{integer} 33m28 36r26 37m17 49m35 55r17 55r34 98r42
-14i7 Idx{integer} 33m51 38m17 49m56 99r38
-17o4 Start_Time{11|57O9} 108m4 113r26
-17o16 End_Time{11|57O9} 112m4 113r15
-18o4 Elapsed{11|62O9} 113m4 115r51
-20U14 Init_Arr 20b14 30l8 30t16 104s4
-21I15 Rand_Range{integer} 22r56
-22K15 Rand[9|46] 23r11 25r7 27r20
-23r7 G{9|52R9[22]} 25r18 27r32
-26i11 I{integer} 27r14
-32V13 Part_Min{12R9} 32b13 32>22 32>33 42l8 42t16 80s20
-32i22 Start_Idx{integer} 33r39 33r58 35r16
-32i33 End_Idx{integer} 35r33
-33r7 Res{12R9} 36r22 37m13 38m13 41r14
-35i11 I{integer} 36r17 37r28 38r24
-44w14 Min_Manager 52b19 65l8 65t19 81r7 96r7
-45U17 Set_Part_Min 45>30 53b17 59l11 59t23 81s19
-45r30 Res{12R9} 53b30 55r13 56r27
-46Y13 Get_Final_Min 46<27 61b13 64l11 64t24 96s19
-46r27 Res{12R9} 63m10
-48i7 Tasks_Finished{integer} 58r10 58r28 61r54
-49r7 Global_Min{12R9} 55r23 56r13 63r17
-61r27 Res{12R9}
-67T14 Search_Thread 69l8 69e21 71b14 82l8 82t21 85r41
-68Y13 Start 68>19 68>30 75b14 78l11 78t16 93s21
-68i19 Start_Idx{integer} 76r25
-68i30 End_Idx{integer} 77r23
-72i7 Local_Start{integer} 76m10 80r29
-72i20 Local_End{integer} 77m10 80r42
-73r7 Local_Res{12R9} 80m7 81r32
-75i20 Start_Idx{integer}
-75i31 End_Idx{integer}
-84U14 Parallel_Min 84b14 100l8 100t20 110s4
-85a7 Threads(67T14) 93r10
-86i7 Chunk_Size{integer} 91r29 92r60
-87r7 Final_Res{12R9} 96m33 98r32 99r28
-88i7 S_Idx{integer} 91m10 92r52 93r27
-88i14 E_Idx{integer} 92m10 93r34
-90i11 I{integer} 91r20 92r23 93r18
-X 26 s-arit64.ads
-59I12*Int64{19|68I9}
+X 24 main.adb
+6U11*Main 6b11 127l5 127t9
+8i4 Dim{integer} 16r31 32r19 92r31 99r22
+9i4 Thread_Num{integer} 67r71 91r26 92r37 96r19 98r17 116r47
+11R9 Min_Result 14e14 38r62 39r13 51r39 52r37 55r20 59r39 67r37 79r19 93r19
+12i7 Val{integer} 39m28 42r26 43m17 55m35 61r17 61r34 108r42
+13i7 Idx{integer} 39m51 44m17 55m56 109r42
+16A9 Int_Array(integer)<integer> 17r36 19r53 21r34
+17P9 Int_Array_Access(16A9) 19r64 21r10
+19U14 Free[19|23] 126s4
+21p4 Arr{17P9} 33r10 35r7 39r35 42r13 43r24 126m9 126r9
+23o4 Start_Time{11|57O9} 118m4 122r26
+23o16 End_Time{11|57O9} 120m4 122r15
+24o4 Elapsed{11|62O9} 122m4 124r61
+26U14 Init_Arr 26b14 36l8 36t16 114s4
+27I15 Rand_Range{integer} 28r56
+28K15 Rand[9|46] 29r11 31r7 33r20
+29r7 G{9|52R9[28]} 31r18 33r32
+32i11 I{integer} 33r14
+38V13 Part_Min{11R9} 38b13 38>22 38>33 48l8 48t16 86s20
+38i22 Start_Idx{integer} 39r39 39r58 41r16
+38i33 End_Idx{integer} 41r33
+39r7 Res{11R9} 42r22 43m13 44m13 47r14
+41i11 I{integer} 42r17 43r28 44r24
+50w14 Min_Manager 58b19 71l8 71t19 87r7 106r7
+51U17 Set_Part_Min 51>30 59b17 65l11 65t23 87s19
+51r30 Res{11R9} 59b30 61r13 62r27
+52Y13 Get_Final_Min 52<27 67b13 70l11 70t24 106s19
+52r27 Res{11R9} 69m10
+54i7 Tasks_Finished{integer} 64r10 64r28 67r54
+55r7 Global_Min{11R9} 61r23 62r13 69r17
+67r27 Res{11R9}
+73T14 Search_Thread 75l8 75e21 77b14 88l8 88t21 91r41
+74Y13 Start 74>19 74>30 81b14 84l11 84t16 103s21
+74i19 Start_Idx{integer} 82r25
+74i30 End_Idx{integer} 83r23
+78i7 Local_Start{integer} 82m10 86r29
+78i20 Local_End{integer} 83m10 86r42
+79r7 Local_Res{11R9} 86m7 87r32
+81i20 Start_Idx{integer}
+81i31 End_Idx{integer}
+90U14 Parallel_Min 90b14 110l8 110t20 119s4
+91a7 Threads(73T14) 103r10
+92i7 Chunk_Size{integer} 97r29 101r30
+93r7 Final_Res{11R9} 106m33 108r32 109r32
+94i7 S_Idx{integer} 97m10 101r22 103r27
+94i14 E_Idx{integer} 99m13 101m13 103r34
+96i11 I{integer} 97r20 98r13 103r18
+X 27 s-arit64.ads
+59I12*Int64{20|68I9}
 108V13*Multiply_With_Ovflo_Check64{59I12} 112i<c,__gnat_mulv64>22
-X 46 s-rannum.ads
-77V13*Random{19|92M9} 47|224i21
-78V13*Random{19|95M9} 47|224i21
-X 52 s-stausa.ads
+X 47 s-rannum.ads
+77V13*Random{20|92M9} 48|224i21
+78V13*Random{20|95M9} 48|224i21
+X 53 s-stausa.ads
 207U14*Initialize 208i<c,__gnat_stack_usage_initialize>22
 272U14*Output_Results 276i<c,__gnat_stack_usage_output_results>22
 

@@ -1,18 +1,24 @@
 with Ada.Text_IO; use Ada.Text_IO;
 with Ada.Numerics.Discrete_Random;
 with Ada.Real_Time; use Ada.Real_Time;
+with Ada.Unchecked_Deallocation;
 
-procedure main is
+procedure Main is
 
-   Dim : constant Integer := 1_000_000;
+   Dim : constant Integer := 10_000_000;
    Thread_Num : constant Integer := 4;
-
-   Arr : array(1..Dim) of Integer;
 
    type Min_Result is record
       Val : Integer;
       Idx : Integer;
    end record;
+
+   type Int_Array is array(1..Dim) of Integer;
+   type Int_Array_Access is access Int_Array;
+
+   procedure Free is new Ada.Unchecked_Deallocation(Int_Array, Int_Array_Access);
+
+   Arr : Int_Array_Access := new Int_Array;
 
    Start_Time, End_Time : Time;
    Elapsed : Time_Span;
@@ -26,7 +32,7 @@ procedure main is
       for I in 1..Dim loop
          Arr(I) := Rand.Random(G);
       end loop;
-      Arr(99) := -172;
+      Arr(989) := -172;
    end Init_Arr;
 
    function Part_Min(Start_Idx, End_Idx : in Integer) return Min_Result is
@@ -89,14 +95,18 @@ procedure main is
    begin
       for I in 1..Thread_Num loop
          S_Idx := (I - 1) * Chunk_Size + 1;
-         E_Idx := (if I = Thread_Num then Dim else S_Idx + Chunk_Size - 1);
+         if I = Thread_Num then
+            E_Idx := Dim;
+         else
+            E_Idx := S_Idx + Chunk_Size - 1;
+         end if;
          Threads(I).Start(S_Idx, E_Idx);
       end loop;
 
       Min_Manager.Get_Final_Min(Final_Res);
 
       Put_Line("Min value: " & Final_Res.Val'Img);
-      Put_Line("Index: " & Final_Res.Idx'Img);
+      Put_Line("Min index: " & Final_Res.Idx'Img);
    end Parallel_Min;
 
 begin
@@ -106,11 +116,12 @@ begin
    Put_Line("Starting parallel search with" & Thread_Num'Img & " threads...");
 
    Start_Time := Clock;
-
    Parallel_Min;
-
    End_Time := Clock;
+
    Elapsed := End_Time - Start_Time;
 
-   Put_Line("Time: " & Duration'Image(To_Duration(Elapsed)) & " seconds");
+   Put_Line("Execution time: " & Duration'Image(To_Duration(Elapsed)) & " seconds");
+
+   Free(Arr);
 end Main;

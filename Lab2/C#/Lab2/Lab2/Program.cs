@@ -13,7 +13,7 @@ namespace Lab2
         private static readonly int length = 100_000_000; 
         private static readonly int threadsCount = 16;
         private static int minNum = -172;
-        private static int minIndex = 12331;
+        private static int minIndex = 50000;
         private static readonly Stopwatch timer = new Stopwatch();
 
         static void Main(string[] args)

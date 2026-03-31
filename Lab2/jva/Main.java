@@ -5,7 +5,7 @@ public class Main {
         int length = 100_000_000;
         int threadsCount = 10;
         int minNum = -172;
-        int minIndex = 989;
+        int minIndex = 5000000;
 
         System.out.println("Quantity of threads: " + threadsCount);
         GigArray gigArray = new GigArray(length, threadsCount, minNum, minIndex);
