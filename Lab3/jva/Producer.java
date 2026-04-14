@@ -2,7 +2,7 @@ package jva;
 
 public class Producer implements Runnable {
     private final int id;
-    private final int itemNumbers; // Індивідуальна квота
+    private final int itemNumbers; 
     private final Manager manager;
 
     public Producer(int id, int itemNumbers, Manager manager) {

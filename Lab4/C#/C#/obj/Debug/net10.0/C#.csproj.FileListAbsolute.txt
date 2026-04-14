@@ -1,0 +1,15 @@
+C:\Users\Anton\Desktop\uni\ParallelComputing\Lab4\C#\C#\bin\Debug\net10.0\C#.exe
+C:\Users\Anton\Desktop\uni\ParallelComputing\Lab4\C#\C#\bin\Debug\net10.0\C#.deps.json
+C:\Users\Anton\Desktop\uni\ParallelComputing\Lab4\C#\C#\bin\Debug\net10.0\C#.runtimeconfig.json
+C:\Users\Anton\Desktop\uni\ParallelComputing\Lab4\C#\C#\bin\Debug\net10.0\C#.dll
+C:\Users\Anton\Desktop\uni\ParallelComputing\Lab4\C#\C#\bin\Debug\net10.0\C#.pdb
+C:\Users\Anton\Desktop\uni\ParallelComputing\Lab4\C#\C#\obj\Debug\net10.0\C#.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Anton\Desktop\uni\ParallelComputing\Lab4\C#\C#\obj\Debug\net10.0\C#.AssemblyInfoInputs.cache
+C:\Users\Anton\Desktop\uni\ParallelComputing\Lab4\C#\C#\obj\Debug\net10.0\C#.AssemblyInfo.cs
+C:\Users\Anton\Desktop\uni\ParallelComputing\Lab4\C#\C#\obj\Debug\net10.0\C#.csproj.CoreCompileInputs.cache
+C:\Users\Anton\Desktop\uni\ParallelComputing\Lab4\C#\C#\obj\Debug\net10.0\C#.sourcelink.json
+C:\Users\Anton\Desktop\uni\ParallelComputing\Lab4\C#\C#\obj\Debug\net10.0\C#.dll
+C:\Users\Anton\Desktop\uni\ParallelComputing\Lab4\C#\C#\obj\Debug\net10.0\refint\C#.dll
+C:\Users\Anton\Desktop\uni\ParallelComputing\Lab4\C#\C#\obj\Debug\net10.0\C#.pdb
+C:\Users\Anton\Desktop\uni\ParallelComputing\Lab4\C#\C#\obj\Debug\net10.0\C#.genruntimeconfig.cache
+C:\Users\Anton\Desktop\uni\ParallelComputing\Lab4\C#\C#\obj\Debug\net10.0\ref\C#.dll

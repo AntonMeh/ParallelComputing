@@ -10,7 +10,7 @@ namespace Lab3
         private static List<string> storage = new List<string>();
 
         private static Semaphore emptySlots = new Semaphore(storageCapacity, storageCapacity);
-        private static Semaphore fullSlots = new Semaphore(0, storageCapacity);
+        private static Semaphore порожнійСклад = new Semaphore(0, storageCapacity);
         private static Semaphore mutex = new Semaphore(1, 1);
         static void Main(string[] args)
         {
@@ -73,9 +73,7 @@ namespace Lab3
                 Console.WriteLine($"Producer {id+1} added a product. In storage: {storage.Count}");
 
                 mutex.Release();      
-                fullSlots.Release(); 
-
-                Thread.Sleep(100);
+                порожнійСклад.Release(); 
             }
         }
 
@@ -83,7 +81,7 @@ namespace Lab3
         {
             for (int i = 0; i < quota; i++)
             {
-                fullSlots.WaitOne();  
+                порожнійСклад.WaitOne();  
                 mutex.WaitOne();     
 
                 if (storage.Count > 0)
@@ -95,8 +93,6 @@ namespace Lab3
 
                 mutex.Release();      
                 emptySlots.Release(); 
-
-                Thread.Sleep(150);
             }
         }
     } 
