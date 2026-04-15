@@ -20,9 +20,9 @@ public class Table {
     public void putFork(int id) {
         forks[id].release();
     }
-}/* 
+}
 
-public class Table {
+/*public class Table {
     private final Semaphore[] forks = new Semaphore[5];
     private final Semaphore waiter = new Semaphore(4);
 

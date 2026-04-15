@@ -14,7 +14,7 @@ public class Philosopher extends Thread {
     @Override
     public void run() {
         for (int i = 0; i < 10; i++) {
-            System.out.println("Philosopher" + id + " is thinking " + (i + 1) + " times");
+            System.out.println("Philosopher " + id + " is thinking " + (i + 1) + " times");
             
             if (id == 4) {
                 table.getFork(leftFork);
@@ -24,10 +24,26 @@ public class Philosopher extends Thread {
                 table.getFork(leftFork);
             }
             
-            System.out.println("Philosopher" + id + " is eating " + (i + 1) + " times");
+            System.out.println("Philosopher " + id + " is eating " + (i + 1) + " times");
             
             table.putFork(leftFork);
             table.putFork(rightFork);
         }
     }
+    /*@Override
+    public void run() {
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Philosopher " + id + " is thinking " + (i + 1) + " times");
+            
+            table.enterRoom();
+            table.getFork(leftFork);
+            table.getFork(rightFork);
+            
+            System.out.println("Philosopher " + id + " is eating " + (i + 1) + " times");
+            
+            table.putFork(leftFork);
+            table.putFork(rightFork);
+            table.leaveRoom();
+        }
+    }*/
 }
