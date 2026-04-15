@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Anton\\Desktop\\uni\\ParallelComputing\\Lab4\\C#\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7C5A6E3B-C7F6-417F-B8B3-FD1984D116B7}|C#\\C#.csproj|c:\\users\\anton\\desktop\\uni\\parallelcomputing\\lab4\\c#\\c#\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C5A6E3B-C7F6-417F-B8B3-FD1984D116B7}|C#\\C#.csproj|solutionrelative:c#\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{40B2E9CF-62E7-F4AA-ED6A-22906169E813}|2nd_Variant\\2nd_Variant.csproj|c:\\users\\anton\\desktop\\uni\\parallelcomputing\\lab4\\c#\\2nd_variant\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40B2E9CF-62E7-F4AA-ED6A-22906169E813}|2nd_Variant\\2nd_Variant.csproj|solutionrelative:2nd_variant\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7ECCDC20-8F40-40C5-A1DF-9A6250BC54B7}|2nd_Variant\\2nd_Variant.csproj|c:\\users\\anton\\desktop\\uni\\parallelcomputing\\lab4\\c#\\2nd_variant\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7ECCDC20-8F40-40C5-A1DF-9A6250BC54B7}|2nd_Variant\\2nd_Variant.csproj|solutionrelative:2nd_variant\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A735CE4F-0AC9-A842-7238-31103646DC45}|C#\\C#.csproj|c:\\users\\anton\\desktop\\uni\\parallelcomputing\\lab4\\c#\\c#\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A735CE4F-0AC9-A842-7238-31103646DC45}|C#\\C#.csproj|solutionrelative:c#\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,30 +18,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Anton\\Desktop\\uni\\ParallelComputing\\Lab4\\C#\\2nd_Variant\\Program.cs",
               "RelativeDocumentMoniker": "2nd_Variant\\Program.cs",
               "ToolTip": "C:\\Users\\Anton\\Desktop\\uni\\ParallelComputing\\Lab4\\C#\\2nd_Variant\\Program.cs",
               "RelativeToolTip": "2nd_Variant\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-14T19:49:57.86Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Anton\\Desktop\\uni\\ParallelComputing\\Lab4\\C#\\C#\\Program.cs",
               "RelativeDocumentMoniker": "C#\\Program.cs",
               "ToolTip": "C:\\Users\\Anton\\Desktop\\uni\\ParallelComputing\\Lab4\\C#\\C#\\Program.cs",
               "RelativeToolTip": "C#\\Program.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAowD8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwDcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-14T18:56:48.944Z",
               "EditorCaption": ""

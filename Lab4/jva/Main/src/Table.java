@@ -32,11 +32,11 @@ public class Table {
         }
     }
 
-    public void enterRoom() {
+    public void enterTable() {
         try { waiter.acquire(); } catch (InterruptedException e) { throw new RuntimeException(e); }
     }
 
-    public void leaveRoom() {
+    public void leaveTable() {
         waiter.release();
     }
 

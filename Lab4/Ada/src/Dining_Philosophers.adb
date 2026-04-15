@@ -1,42 +1,11 @@
 with Ada.Text_IO; use Ada.Text_IO;
+with GNAT.Semaphores; use GNAT.Semaphores;
 
 procedure Dining_Philosophers is
-   task type Fork is
-      entry Pick_Up;
-      entry Put_Down;
-   end Fork;
 
-   task body Fork is
-   begin
-      loop
-         select
-            accept Pick_Up;
-            accept Put_Down;
-         or
-            terminate;
-         end select;
-      end loop;
-   end Fork;
+   Forks : array (0 .. 4) of Counting_Semaphore(1, Default_Ceiling);
 
-   protected Table is
-      entry Enter;
-      procedure Leave;
-   private
-      Occupants : Integer := 4;
-   end Table;
-
-   protected body Table is
-      entry Enter when Occupants > 0 is
-      begin
-         Occupants := Occupants - 1;
-      end Enter;
-      procedure Leave is
-      begin
-         Occupants := Occupants + 1;
-      end Leave;
-   end Table;
-
-   Forks : array (0 .. 4) of Fork;
+   Waiter : Counting_Semaphore(4, Default_Ceiling);
 
    task type Philosopher (ID : Integer);
 
@@ -45,17 +14,19 @@ procedure Dining_Philosophers is
       Right_Fork : Integer := ID;
    begin
       for I in 1 .. 10 loop
-         Put_Line("Philosopher " & Integer'Image(ID) & " is thinking" & Integer'Image(I) & " times");
+         Put_Line("Philosopher " & Integer'Image(ID) & " is thinking " & Integer'Image(I) & " times");
 
-         Table.Enter;
-         Forks (Right_Fork).Pick_Up;
-         Forks(Left_Fork).Pick_Up;
+         Waiter.Seize;
 
-         Put_Line("Philosopher " & Integer'Image(ID) & " is eating" & Integer'Image(I) & " times");
+         Forks(Right_Fork).Seize;
+         Forks(Left_Fork).Seize;
 
-         Forks(Left_Fork).Put_Down;
-         Forks (Right_Fork).Put_Down;
-         Table.Leave;
+         Put_Line("Philosopher " & Integer'Image(ID) & " is eating " & Integer'Image(I) & " times");
+
+         Forks(Left_Fork).Release;
+         Forks(Right_Fork).Release;
+
+         Waiter.Release;
       end loop;
    end Philosopher;
 

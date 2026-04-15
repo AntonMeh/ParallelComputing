@@ -1,24 +1,9 @@
 with Ada.Text_IO; use Ada.Text_IO;
+with GNAT.Semaphores; use GNAT.Semaphores;
 
-procedure Main is
-   task type Fork is
-      entry Pick_Up;
-      entry Put_Down;
-   end Fork;
+procedure Dining_Philosophers_Method1 is
 
-   task body Fork is
-   begin
-      loop
-         select
-            accept Pick_Up;
-            accept Put_Down;
-         or
-            terminate;
-         end select;
-      end loop;
-   end Fork;
-
-   Forks : array (0 .. 4) of Fork;
+   Forks : array (0 .. 4) of Counting_Semaphore(1, Default_Ceiling);
 
    task type Philosopher (ID : Integer);
 
@@ -27,20 +12,20 @@ procedure Main is
       Right_Fork : Integer := ID;
    begin
       for I in 1 .. 10 loop
-         Put_Line("Philosopher " & Integer'Image(ID) & " is thinking" & Integer'Image(I) & " times");
+         Put_Line("Philosopher " & Integer'Image(ID) & " is thinking " & Integer'Image(I) & " times");
 
          if ID = 4 then
-            Forks(Left_Fork).Pick_Up;
-            Forks(Right_Fork).Pick_Up;
+            Forks(Left_Fork).Seize;
+            Forks(Right_Fork).Seize;
          else
-            Forks(Right_Fork).Pick_Up;
-            Forks(Left_Fork).Pick_Up;
+            Forks(Right_Fork).Seize;
+            Forks(Left_Fork).Seize;
          end if;
 
-         Put_Line("Philosopher " & Integer'Image(ID) & " is eating" & Integer'Image(I) & " times");
+         Put_Line("Philosopher " & Integer'Image(ID) & " is eating " & Integer'Image(I) & " times");
 
-         Forks(Left_Fork).Put_Down;
-         Forks(Right_Fork).Put_Down;
+         Forks(Left_Fork).Release;
+         Forks(Right_Fork).Release;
       end loop;
    end Philosopher;
 
@@ -51,4 +36,4 @@ procedure Main is
    P4 : Philosopher(4);
 begin
    null;
-end Main;
+end Dining_Philosophers_Method1;

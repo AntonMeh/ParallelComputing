@@ -35,7 +35,7 @@ public class Philosopher extends Thread {
         for (int i = 0; i < 10; i++) {
             System.out.println("Philosopher " + id + " is thinking " + (i + 1) + " times");
             
-            table.enterRoom();
+            table.enterTable();
             table.getFork(leftFork);
             table.getFork(rightFork);
             
@@ -43,7 +43,7 @@ public class Philosopher extends Thread {
             
             table.putFork(leftFork);
             table.putFork(rightFork);
-            table.leaveRoom();
+            table.leaveTable();
         }
     }*/
 }
